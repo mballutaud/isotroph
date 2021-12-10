@@ -10,22 +10,54 @@ dmm: definition, reference and objective
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
+#setup
+```{r}
+#install.packages("deSolve")
+library(deSolve) #solver for Ordinary Differential Equations (ODE)
 ```
 
-## Including Plots
+#load data and functions
+```{r}
+load("data/random-sources-100simu.Rdata") # matrix of Brownian trajectories - see script product-brownian-sources.R to produce them
 
-You can also embed plots, for example:
+source("data/parameters.R") #load all parameters for in-silico experiment, case study and layout of graphics
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+
+source("R/dmm-functions.R") #load all procedures for estimating isotopic values and food source proportions
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
+#create figure 2
+```{r}
+#source("R/figure2.R")
+```
+
+#create figure 3
+```{r}
+#source("R/figure3.R")
+```
+
+#create figure 4
+```{r}
+#source("R/figure4.R")
+```
+
+#create figure 5
+```{r}
+#source("R/figure5.R")
+#dev.off()
+```
+
+#create figure 6
+```{r}
+#source("R/figure6.R")
+#file.show("R/figure6.R")
+#source.with.encoding("R/figure6.R", encoding = "utf8")
+
+```
+
+
+#results
+All results and figures are available in directory named dmm/output.
+
