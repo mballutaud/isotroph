@@ -1,9 +1,29 @@
 ---
-title: "DMM presentation"
+title: "DMM documentation"
 author: "Marine Ballutaud"
-date: "10/12/2021"
+date: "09/02/2022"
 output: html_document
 ---
+# Definition
+In trophic ecology, the stable isotope mixing models are used to estimate the contributions of food sources to animal diets. These mixing models assume an isotopic equilibrium between isotopic values of food sources (prey) and consumer (predator).
+
+However, this isotopic equilibrium is not instantaneous and a time lag occurs between the actual diet and the estimated diet. The magnitude of this time lag depends on the isotopic turnover rate.
+
+The dynamic mixing model (DMM) has been developed in a mechanistic framework to assess the contribution
+of the isotopic turnover rate to the dynamics of isotopic incorporation. This framework has enabled to estimate the bias induced by neglecting the time lag (induced by the isotopic turnover rate) in diet reconstruction in conventional static mixing models.
+
+The DMM includes three components of temporal variability: the isotope dynamics of food sources ($\delta_s$), the frequency of diet-switch ($\omega$) and the isotopic turnover rate ($\lambda$) over time.
+
+# Description
+First, the dynamic mixing model (DMM) is used into an in-silico experiment to mechanistically simulate the isotopic values of consumer, with different scenarios for the three components of temporal variability (as forcing variables of $\delta_s$, $\omega$ and $\lambda$). Then, the simulated consumer values are used in inferential way to estimate the contributions of food sources and finally estimate the bias between forced and estimated contributions. (see Figures 2 to 5 in the code section)
+
+Second, a case study based on an existing dataset (for Pacific oyster) was used to apply the DMM and compare it to other methods. (see Figure 6 in the code section))
+
+# Code
+
+# Reference
+This code is the support for the research article entitled: “Inferences to estimate consumer’s diet using stable isotopes: insights from a dynamic mixing model” by Marine Ballutaud, Morgane Travers-Trolet, Paul Marchal, Stanislas F. Dubois, Carolina Giraldo, Andrew C. Parnell, M. Teresa Nuche-Pascual and Sébastien Lefebvre. This article is available on: <https://doi.org/10.1371/journal.pone.0263454>.
+
 dmm: definition, reference and objective
 + code functioning among directories 
 ```{r setup, include=FALSE}
